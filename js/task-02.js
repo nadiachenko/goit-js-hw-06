@@ -16,9 +16,11 @@ const ingredients = [
   'Condiments',
 ];
 const ul = document.querySelector("#ingredients");
-const liArray = ingredients.map(ingredient => {
+const liArray = [];
+ingredients.map(ingredient => {
 const liElement = document.createElement("li")
 liElement.classList.add('item')
 liElement.textContent = ingredient;
-ul.append(liElement)
-}).join('');
+liArray.push(liElement);
+});
+ul.append(...liArray);

@@ -8,10 +8,7 @@
 
 const categories = document.querySelector("#categories");
 const arr = [...categories.children];
-let numberOfCategories = 0;
- arr.forEach((element) => {
-    numberOfCategories +=1;
- });
+const numberOfCategories = [...categories.children].length;
  console.log("Number of categories:", numberOfCategories)
 
 

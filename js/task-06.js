@@ -14,7 +14,6 @@ const inputField = document.querySelector('#validation-input');
 
 inputField.addEventListener('blur', onBlur);
 
-
 function onBlur(event) {
 
     
@@ -27,5 +26,10 @@ function onBlur(event) {
         
      }
      
- 
-    
+ inputField.addEventListener("input", onInput);
+
+    function onInput(event) {
+      
+        inputField.classList.remove("invalid");
+      
+    }
